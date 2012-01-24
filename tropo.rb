@@ -40,7 +40,7 @@ begin
 	blocked.push(/^\+?1?939/)
 
 
-	phone = $currentCall.getHeader("x-numbertodial")
+	phone = $currentCall.getHeader("x-numbertodial").gsub("-","").gsub(".","").gsub(" ", "")
 log "@"*5 +phone
 
 	allowcall = true
